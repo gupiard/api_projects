@@ -22,8 +22,8 @@ raw_data = open(url_of_data_we_want).read
 parsed_data =JSON.parse(raw_data)
 
 the_temperature  = parsed_data["currently"]["temperature"]
-the_hour_outlook = parsed_data["hourly"]["data"][1]["summary"]
-the_day_outlook  = parsed_data["daily"]["data"][1]["summary"]
+the_hour_outlook = parsed_data["hourly"]["data"][0]["summary"]
+the_day_outlook  = parsed_data["daily"]["data"][0]["summary"]
 
 # Ultimately, we want the following line to work when uncommented:
 puts "The current temperature at #{the_address} is #{the_temperature} degrees."
